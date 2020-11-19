@@ -5,7 +5,7 @@
 
     <div class="card card-body card-title">
         <h1>{{$post->title}}</h1>
-        {{$post->body}}
+        {!! $post->body !!} <!-- Parsing html -->
     </div>
     <small>Created on {{$post->created_at}}</small>
     <hr>
