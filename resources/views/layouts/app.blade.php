@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>{{config('app.name', 'Personal Blog')}}</title>
+        <script src="{{ asset('ckeditor/ckeditor.js') }}" defer></script>
 
     </head>
     <body class="antialiased">
@@ -12,5 +13,11 @@
         <div class="container">
             @yield('content')
         </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.ckeditor').ckeditor();
+            });
+        </script>
     </body>
 </html>
