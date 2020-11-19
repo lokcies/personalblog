@@ -10,6 +10,7 @@
     </head>
     <body class="antialiased">
         @include('inc.navbar')
+        @include('inc.messages')
         <div class="container">
             @yield('content')
         </div>
