@@ -14,8 +14,11 @@ use App\Http\Controllers\PostsController;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
+Route::get('/', [PostsController::class, 'home']);
 Route::resource('posts', PostsController::class);
