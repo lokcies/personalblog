@@ -5,9 +5,10 @@
     @if(count($posts)>0)
         @foreach($posts as $post)
             <div class="card card-body card-title">
-            <small class="font-weight-bold">Post {{(0+$post->id)}}</small> <hr>
+            <a href="posts/{{$post->id}}">
+                <small class="font-weight-bold">Post {{$post->id}}</small>
+            </a><hr>
                 <h3>{{$post->title}}</h3>
-                <p>{{$post->body}}</p>
             </div>
         @endforeach
     @else
