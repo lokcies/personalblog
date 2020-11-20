@@ -10,4 +10,9 @@
     <small>Created on {{$post->created_at}}</small>
     <hr>
     <a href="/posts/{{$post->id}}/edit" class="btn btn-secondary">Edit Post</a>
+
+    {!! Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'POST']) !!}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Delete', ['class' => 'btn btn-danger float-right'])}}
+    {!! Form::close() !!}
 @endsection
