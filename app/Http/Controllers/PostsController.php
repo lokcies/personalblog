@@ -13,9 +13,9 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function home()
+    public function homepage()
     {
-        return view('posts.home');
+        return view('posts.homepage');
     }
 
     public function index()

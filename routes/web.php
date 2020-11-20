@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', [PostsController::class, 'home']);
+Route::get('/', [PostsController::class, 'homepage']); // Parameter, dir, [<Controller::class>, <controller method>]
 Route::resource('posts', PostsController::class);
 Auth::routes();
 
